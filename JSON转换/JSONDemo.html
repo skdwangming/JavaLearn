@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<table border="1" id="ta">
+    <tr>
+        <td>姓名</td>
+        <td>性别</td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+    var json = "[{\"sex\":\"man\",\"name\":\"wangming\"},{\"sex\":\"women\",\"name\":\"xiaohong\"}]";
+    var parse = JSON.parse(json);
+    for (var o in parse){
+
+        //创建列
+        var text1 = document.createTextNode(parse[o].name);
+        var td1 = document.createElement("td");
+        td1.appendChild(text1);
+        var text2 = document.createTextNode(parse[o].sex);
+        var td2= document.createElement("td");
+        td2.appendChild(text2);
+
+        //创建行
+        var tr = document.createElement("tr");
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+
+        //将行添加到table中
+        var table = document.getElementById("ta");
+        table.appendChild(tr);
+
+        console.log(parse[o].name);
+        console.log(parse[o].sex);
+    }
+    console.log(parse)
+</script>
+
+</body>
+</html>
