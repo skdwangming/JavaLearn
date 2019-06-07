@@ -22,7 +22,7 @@ import java.util.Set;
  *          Object中的hashCode方法，用的是native关键字修饰，说明是用c/c++实现的，在不同操作系统实现是不一样的。
  *          java程序运行时，无论何时多次调用同一个对象的hashCode（）方法，返回的值必须相同
  *          如果两个对象equals（）返回true，则hashCode（）方法必须返回相同的数值
- *          如果两个对象equals（）返回false，则hashCode（）方法必须放回不同的值
+ *          如果两个对象equals（）返回false，则hashCode（）方法必须返回不同的值
  *          所以重写equals（）方法后，必须重写hashCode（）方法
  *      什么情况需要重写？
  *          自定义的一个类，需要存放在集合中时，需要重写，集合有两种List、Set
