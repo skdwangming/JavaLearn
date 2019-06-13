@@ -6,7 +6,7 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class SocketDemo {
+public class TCPDemo {
 
     /*
      * TCP 服务器端
